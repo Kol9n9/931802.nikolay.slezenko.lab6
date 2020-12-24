@@ -1,0 +1,12 @@
+.main{
+	width: 900px;
+	margin: 0 auto;
+}
+.leftside{
+	width: 50%;
+	background: rgb(0,0,255);
+}
+.righside{
+	width: 50%;
+	background: rgb(0,255,0);
+}
