@@ -6,17 +6,57 @@
 	<link type="text/css" rel="stylesheet" href="css/reset.css"/>
 	<link type="text/css" rel="stylesheet" href="css/main.css"/>
 	<script>
-		
+		function changeColumn(column){
+			switch (column){
+				case -1: 
+					document.getElementById("leftside").style.width = "95%";
+					document.getElementById("rightcontent").style.display = "none";
+					document.getElementById("leftcontent").style.display = "block";
+					let img = document.getElementById("leftside").getElementsByTagName("img")[0];
+					let imgHeight = img.clientHeight;
+					img.style.width = "600px";
+					document.getElementById("rightside").style.height = ""+imgHeight+"px";
+					break;
+				case 0: 
+					document.getElementById("leftside").style.width = "50%";
+					document.getElementById("rightcontent").style.display = "block";
+					document.getElementById("leftcontent").style.display = "block";
+					let img1 = document.getElementById("leftside").getElementsByTagName("img")[0];
+					let img2 = document.getElementById("rightside").getElementsByTagName("img")[0];
+					img1.style.width = "410px";
+					img2.style.width = "410px";
+					break;
+				case 1: 
+					document.getElementById("leftside").style.width = "5%";
+					document.getElementById("rightcontent").style.display = "block";
+					document.getElementById("leftcontent").style.display = "none";
+					let imgg = document.getElementById("rightside").getElementsByTagName("img")[0];
+					let imggHeight = imgg.clientHeight;
+					imgg.style.width = "600px";
+					document.getElementById("leftside").style.height = ""+imggHeight+"px";
+					break;
+			}
+		}
 	</script>
 </head>	
 
 <body>
 	<div class="main">
-		<div class="leftside">
-			1
+		<ul>
+			<li onclick="changeColumn(-1)">Левая колонка</li>
+			<li onclick="changeColumn(0)">Обе две</li>
+			<li onclick="changeColumn(1)">Правая колонка</li>
+			
+		</ul>
+		<div id="leftside">
+			<div id="leftcontent">
+				<img src="img/cat.jpg" alt="cat"/>
+			</div>
 		</div>
-		<div class="rightside">
-			2
+		<div id="rightside">
+			<div id="rightcontent">
+				<img src="img/dog.jpg" alt="cat"/>
+			</div>
 		</div>
 	</div>
 </body>

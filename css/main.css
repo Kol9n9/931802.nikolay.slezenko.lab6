@@ -1,12 +1,38 @@
 .main{
 	width: 900px;
 	margin: 0 auto;
+	position: relative;
 }
-.leftside{
+.main ul{
+	position: absolute;
+	text-align: center;
+	width: 100%;
+}
+.main ul li{
+	display: inline-block;
+	width: 33%;
+	height: 50px;
+	line-height: 50px;
+	font-size: 25px;
+	color: white;
+	background: rgb(255,0,0);
+	cursor: pointer;
+}
+
+
+#leftside{
 	width: 50%;
 	background: rgb(0,0,255);
+	padding: 70px 0 125px 0;
+	float: left;
 }
-.righside{
-	width: 50%;
+#rightside{
 	background: rgb(0,255,0);
+	padding: 70px 0 125px 0;
+	
+}
+img{
+	margin-left: 20px;
+	width: 410px;
+	height: 360px;
 }
